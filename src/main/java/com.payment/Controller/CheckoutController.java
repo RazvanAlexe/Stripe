@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class CheckoutController {
 
-    @Value("${STRIPE_PUBLIC_KEY}")
+    @Value("${stripe.public.key}")
     String stripePublicKey;
 
     @RequestMapping("cart/payment/checkout")
