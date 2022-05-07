@@ -14,7 +14,7 @@ public class CheckoutController {
     @Value("${STRIPE_PUBLIC_KEY}")
     String stripePublicKey;
 
-    @RequestMapping("/checkout")
+    @RequestMapping("cart/payment/checkout")
     public String checkout(Model model) {
         model.addAttribute("amount", 50 * 100); // in cents
         model.addAttribute("stripePublicKey", stripePublicKey);

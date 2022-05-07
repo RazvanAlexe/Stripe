@@ -18,7 +18,7 @@ public class ChargeController {
     @Autowired
     private StripeService paymentsService;
 
-    @PostMapping("/charge")
+    @PostMapping("cart/payment/charge")
     public String charge(ChargeRequest chargeRequest, Model model)
             throws StripeException, AuthenticationException {
         chargeRequest.setDescription("Example charge");
